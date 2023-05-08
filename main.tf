@@ -10,11 +10,6 @@ resource "aws_instance" "foo" {
   }
 }
 
-resource "aws_s3_bucket" "example" {
-  bucket = "my-tf-test-bucket-24081982"
-
-  tags = {
-    Name        = "Mohit Test bucket"
-    Environment = "Dev"
-  }
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
 }
